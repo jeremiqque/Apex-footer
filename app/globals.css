@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+@theme {
+  --font-heading: var(--font-phudu);
+  --font-body: var(--font-inter);
+
+  /* Lumis palette (from Figma) */
+  --color-ink: #161614;
+  --color-cloud-green: #37b669;
+  --color-cloud-mint: #6aea9c;
+  --color-cloud-yellow: #f4ff77;
+  --color-cloud-orange: #ed5d3a;
+  --color-cloud-blue: #659df5;
+  --color-cloud-pink: #fccef0;
+  --color-cloud-pink-deep: #fe99b6;
+  --color-cloud-cream: #fbf8e9;
+}
+
+html,
+body {
+  background-color: var(--color-ink);
+  color: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
