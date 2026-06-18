@@ -25,7 +25,6 @@ body {
 * {
   box-sizing: border-box;
 }
-<<<<<<< HEAD
 
 /* Dashed rule matching the Figma asset (Line 1.svg): #6D6D6D @ 32%, 11px dash / 11px gap */
 .dashed-rule {
@@ -38,5 +37,3 @@ body {
     transparent 22px
   );
 }
-=======
->>>>>>> b3fd0a0c200fc6f0ca828a042e2a30e3c1968d5b
