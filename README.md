@@ -1,4 +1,4 @@
-# Lumis — CTA / Footer section
+# Apex — CTA / Footer section
 
 Implementation of the Figma "Footer – DESKTOP" frame (node `283-919`) from the Lumis file.
 
