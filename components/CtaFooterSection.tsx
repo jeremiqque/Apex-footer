@@ -17,7 +17,10 @@ const QUICK_LINKS = ["Home", "About", "Services", "Contact"];
 const PRODUCTS = ["AI Assistant", "Mobile App", "Account", "Credit Card"];
 const COMPANY = ["About", "Privacy Policy", "Support", "Terms of Service"];
 
-const HEADLINE = ["Thank", "you", "for", "your", "curiosity.", "Let’s", "build", "something", "cool."];
+const HEADLINE_LINES = [
+  ["Thank", "you", "for", "your", "curiosity."],
+  ["Let’s", "build", "something", "cool."],
+];
 
 function LinkColumn({ title, items }: { title: string; items: string[] }) {
   return (
@@ -125,15 +128,19 @@ export default function CtaFooterSection() {
     >
       <div className="mx-auto w-full max-w-[1440px] px-6 pt-14 sm:px-10 lg:px-20 lg:pt-[88px]">
         {/* Headline + peace hand */}
-        <div className="flex items-start justify-between gap-4">
+        <div className="flex items-start gap-6 sm:gap-8">
           <h2 className="font-heading text-[clamp(30px,6.2vw,50px)] uppercase leading-[1.06] tracking-[0.5px] text-white">
-            {HEADLINE.map((w, i) => (
-              <span
-                key={i}
-                className="js-word inline-block"
-                style={{ marginRight: "0.26em" }}
-              >
-                {w}
+            {HEADLINE_LINES.map((line, li) => (
+              <span key={li} className="block">
+                {line.map((w, i) => (
+                  <span
+                    key={i}
+                    className="js-word inline-block"
+                    style={{ marginRight: "0.26em" }}
+                  >
+                    {w}
+                  </span>
+                ))}
               </span>
             ))}
           </h2>
@@ -153,12 +160,11 @@ export default function CtaFooterSection() {
           </div>
         </div>
 
-        {/* Dashed dividers */}
-        <div className="js-divider mt-10 border-t border-dashed border-white/15 lg:mt-14" />
-        <div className="js-divider mt-[18px] border-t border-dashed border-white/15" />
+        {/* Dashed divider above the footer */}
+        <div className="js-divider dashed-rule mt-12" />
 
         {/* Footer: logo + tagline + link columns */}
-        <div className="mt-12 flex flex-col gap-12 lg:flex-row lg:justify-between lg:gap-8">
+        <div className="mt-14 flex flex-col gap-12 lg:flex-row lg:justify-between lg:gap-8">
           <div className="js-foot lg:max-w-[360px]">
             <div className="flex items-center gap-2">
               {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -186,8 +192,8 @@ export default function CtaFooterSection() {
           </div>
         </div>
 
-        {/* Dashed divider before the cloud */}
-        <div className="js-divider mt-12 border-t border-dashed border-white/15" />
+        {/* Dashed divider before the cloud (Figma y=591) */}
+        <div className="js-divider dashed-rule mt-12" />
       </div>
 
       {/* Blob cloud — Matter.js physics: drops in, piles up, draggable / throwable */}

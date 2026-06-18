@@ -25,3 +25,15 @@ body {
 * {
   box-sizing: border-box;
 }
+
+/* Dashed rule matching the Figma asset (Line 1.svg): #6D6D6D @ 32%, 11px dash / 11px gap */
+.dashed-rule {
+  height: 1px;
+  background-image: repeating-linear-gradient(
+    to right,
+    rgba(109, 109, 109, 0.32) 0,
+    rgba(109, 109, 109, 0.32) 11px,
+    transparent 11px,
+    transparent 22px
+  );
+}
